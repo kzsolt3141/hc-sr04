@@ -7,7 +7,7 @@ IFLAGS=-I../uart/ -I../
 
 CFLAGS=-std=c11 -Wall -g -O3 -mmcu=${MCU} -DF_CPU=${F_CPU} ${IFLAGS}
 TARGET=main
-SRCS=main.c ../uart/uart.c ../timer0.c ../timer1.c ../timer2.c
+SRCS=main.c ../uart/uart.c ../hcsr04.c
 
 all:
 	${CC} ${CFLAGS} -o ${TARGET}.bin ${SRCS}
